@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+
+# Frontend build output
+dist/
+
+# Tauri/Rust build output
+src-tauri/target/
+src-tauri/gen/
+
+# Local AI assets are distributed separately.
+# Keep the folder structure in git, but do not commit large binaries/models.
+src-tauri/resources/ai/bin/*
+src-tauri/resources/ai/models/*
+!src-tauri/resources/ai/bin/.gitkeep
+!src-tauri/resources/ai/models/.gitkeep
+!src-tauri/resources/ai/README.md
+
+# Installer outputs and local release copies
+*.msi
+*-setup.exe
+BakerDesk-Setup-*.exe
+BakerDesk.exe
+
+# Local logs and scratch files
+*.log
+*.out
+*.err
+qwen*-test.*
+vite.*.log
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Environment overrides
+.env
+.env.*
+!.env.example

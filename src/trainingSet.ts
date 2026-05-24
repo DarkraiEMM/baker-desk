@@ -1,0 +1,186 @@
+export const intentTrainingExamples = [
+  {
+    user: '需要一个不油腻的配方',
+    json: {
+      intent: 'recommend_recipe',
+      recipe_query: '',
+      target_grams: null,
+      base_hint: '',
+      ingredient_query: '',
+      doc_query: '',
+      reply: 'light fresh less rich',
+    },
+  },
+  {
+    user: '需要一个黄油为主要材料，不需要奶油的轻盈型配方',
+    json: {
+      intent: 'recommend_recipe',
+      recipe_query: '',
+      target_grams: null,
+      base_hint: 'beurre',
+      ingredient_query: '',
+      doc_query: '',
+      reply: '黄油为主 避开奶油 口感轻盈',
+    },
+  },
+  {
+    user: '想要一款甜度适中口感轻盈的配方',
+    json: {
+      intent: 'recommend_recipe',
+      recipe_query: '',
+      target_grams: null,
+      base_hint: '',
+      ingredient_query: '',
+      doc_query: '',
+      reply: '甜度适中 口感轻盈 清爽 成品甜点',
+    },
+  },
+  {
+    user: '想做一个适合夏天的清爽夹心',
+    json: {
+      intent: 'recommend_recipe',
+      recipe_query: '',
+      target_grams: null,
+      base_hint: '',
+      ingredient_query: '',
+      doc_query: '',
+      reply: 'fresh fruit light filling',
+    },
+  },
+  {
+    user: '有没有稳定一点、适合提前做的塔壳',
+    json: {
+      intent: 'recommend_recipe',
+      recipe_query: 'pate sucree',
+      target_grams: null,
+      base_hint: '',
+      ingredient_query: '',
+      doc_query: '',
+      reply: 'stable make-ahead tart shell',
+    },
+  },
+  {
+    user: '帮我把 brioche 缩放到 500g 面粉',
+    json: {
+      intent: 'scale_recipe',
+      recipe_query: 'brioche',
+      target_grams: 500,
+      base_hint: 'farine',
+      ingredient_query: '',
+      doc_query: '',
+      reply: '',
+    },
+  },
+  {
+    user: '布朗尼有吗',
+    json: {
+      intent: 'find_recipe',
+      recipe_query: 'brownie',
+      target_grams: null,
+      base_hint: '',
+      ingredient_query: '',
+      doc_query: '',
+      reply: '',
+    },
+  },
+  {
+    user: '哪些配方用到了 beurre',
+    json: {
+      intent: 'ingredient_search',
+      recipe_query: '',
+      target_grams: null,
+      base_hint: '',
+      ingredient_query: 'beurre',
+      doc_query: '',
+      reply: '',
+    },
+  },
+  {
+    user: '甘那许比例怎么调',
+    json: {
+      intent: 'show_knowledge',
+      recipe_query: '',
+      target_grams: null,
+      base_hint: '',
+      ingredient_query: '',
+      doc_query: 'ganache',
+      reply: '',
+    },
+  },
+  {
+    user: '卡仕达太稠怎么办',
+    json: {
+      intent: 'show_knowledge',
+      recipe_query: '',
+      target_grams: null,
+      base_hint: '',
+      ingredient_query: '',
+      doc_query: 'creme patissiere',
+      reply: '',
+    },
+  },
+  {
+    user: '泡芙面糊的鸡蛋量为什么不是固定的？应该怎么判断加够了？',
+    json: {
+      intent: 'show_knowledge',
+      recipe_query: '',
+      target_grams: null,
+      base_hint: '',
+      ingredient_query: '',
+      doc_query: 'pate a choux',
+      reply: '',
+    },
+  },
+  {
+    user: '我用百香果泥做慕斯，直接按正常用量加吉利丁，应该没问题吧？',
+    json: {
+      intent: 'show_knowledge',
+      recipe_query: '',
+      target_grams: null,
+      base_hint: '',
+      ingredient_query: '',
+      doc_query: 'acidity control mousse hydrocolloids',
+      reply: '高酸水果会抑制吉利丁，需要看 pH、用量和胶凝剂选择',
+    },
+  },
+  {
+    user: '白巧克力甘那许 1:1 太软了，要加更多奶油吗？',
+    json: {
+      intent: 'show_knowledge',
+      recipe_query: '',
+      target_grams: null,
+      base_hint: 'chocolat blanc',
+      ingredient_query: '',
+      doc_query: 'ganache',
+      reply: '白巧克力可可脂结构弱，太软通常不是加奶油，而是提高巧克力或调整脂肪与水相',
+    },
+  },
+  {
+    user: '一个配方需要 6g 吉利丁，能直接换成 6g 琼脂吗？',
+    json: {
+      intent: 'show_knowledge',
+      recipe_query: '',
+      target_grams: null,
+      base_hint: '',
+      ingredient_query: '',
+      doc_query: 'hydrocolloids',
+      reply: '吉利丁和琼脂不能等量替换，凝固温度、口感和用量体系不同',
+    },
+  },
+  {
+    user: 'Dacquoise 和 Biscuit Joconde 可以互换用吗？',
+    json: {
+      intent: 'show_knowledge',
+      recipe_query: '',
+      target_grams: null,
+      base_hint: '',
+      ingredient_query: '',
+      doc_query: 'biscuit joconde dacquoise',
+      reply: '两者都是杏仁结构但口感、含水、承托和用途不同，不能无脑互换',
+    },
+  },
+];
+
+export function formatIntentTrainingExamples(): string {
+  return intentTrainingExamples.map((item) => `用户：${item.user}\nJSON：${JSON.stringify(item.json)}`).join('\n\n');
+}

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Baker Desk logo">
+  <rect width="256" height="256" rx="42" fill="#246e65"/>
+  <path fill="#fff4cf" d="M77 128c-18-4-31-20-31-39 0-23 19-42 42-42 10 0 19 3 26 9 10-15 27-24 47-24 31 0 56 25 56 56v2c19 5 33 22 33 43 0 24-20 44-44 44H83c-21 0-38-17-38-38 0-20 15-36 32-39Z"/>
+  <path fill="#fff4cf" d="M76 156h112c9 0 16 7 16 16v36H60v-36c0-9 7-16 16-16Z"/>
+  <path d="M84 185h96" stroke="#246e65" stroke-width="13" stroke-linecap="round"/>
+</svg>
